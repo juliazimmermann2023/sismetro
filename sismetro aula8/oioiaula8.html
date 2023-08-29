@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #coluna-a {
+            background-color: rgb(5, 3, 0);
+            color: azure;
+        }
+
+        #coluna-b {
+            background-color: pink;
+        }
+
+        #coluna-c {
+            background-color: aquamarine;
+        }
+
+        .coluna {
+            width: 100%;
+            float: left;
+        }
+
+        @media(min-width:800px) {
+            .coluna {
+                width: 50%;
+            }
+        }
+
+        @media (min-width:1000px) {
+            .coluna {
+                width: 33.3%;
+            }
+
+        }
+    </style>
+    <title>Aula 8</title>
+</head>
+
+<body>
+    <div id="coluna-a" class="coluna">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum turpis at pellentesque tincidunt. Duis
+        lectus dui, dapibus in fringilla vitae, aliquet id lacus. Nullam in mauris vulputate, sagittis augue sed,
+        pellentesque odio. Sed aliquet pharetra arcu, ut efficitur urna cursus tincidunt. Nam molestie risus a massa
+        luctus, ac accumsan orci tempor. Nullam suscipit viverra aliquet. In in tellus elit. Curabitur leo dolor, mollis
+        eget finibus vel, gravida vitae elit. Nunc non consequat est.
+    </div>
+    <div id="coluna-b" class="coluna">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum turpis at pellentesque tincidunt. Duis
+        lectus dui, dapibus in fringilla vitae, aliquet id lacus. Nullam in mauris vulputate, sagittis augue sed,
+        pellentesque odio. Sed aliquet pharetra arcu, ut efficitur urna cursus tincidunt. Nam molestie risus a massa
+        luctus, ac accumsan orci tempor. Nullam suscipit viverra aliquet. In in tellus elit. Curabitur leo dolor, mollis
+        eget finibus vel, gravida vitae elit. Nunc non consequat est.
+    </div>
+    <div id="coluna-c" class="coluna">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum turpis at pellentesque tincidunt. Duis
+        lectus dui, dapibus in fringilla vitae, aliquet id lacus. Nullam in mauris vulputate, sagittis augue sed,
+        pellentesque odio. Sed aliquet pharetra arcu, ut efficitur urna cursus tincidunt. Nam molestie risus a massa
+        luctus, ac accumsan orci tempor. Nullam suscipit viverra aliquet. In in tellus elit. Curabitur leo dolor, mollis
+        eget finibus vel, gravida vitae elit. Nunc non consequat est.
+    </div>
+</body>
+
+</html>
