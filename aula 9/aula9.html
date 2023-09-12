@@ -19,7 +19,7 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            background-color: aliceblue;
+            background-color: rgb(179, 234, 227);
         }
 
         ul {
@@ -29,17 +29,23 @@
             list-style-type: none;
             width: 100%;
         }
-
-        .personagens{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 20px;
+        .coluna{width: 100%;
+            float: left;
         }
-        .personagens div{
-            width: 25%;
+        @media (min-width:800px) {
+            .coluna {
+                width:50%;
+            }
+         }
+            @media (min-width:1200px) {
+            .coluna {
+                width:25%;
+            }
+         }
+        .personagens{
             padding: 10px;
         }
+       
         h3{
             text-align: center;
             font-weight: bold;
@@ -62,26 +68,24 @@
     </header>
     <main>
         <section class="personagens">
-            <div>
-                <h3>Burro</h3>
-              
+            
+               
+                <div class="coluna">
+                    <h3>Burro</h3>
                 <p>O Burro sofria com uma vida de abusos. Era constantemente ridicularizado pelas pessoas, até que, literalmente, correu para o ogro Shrek. O monstro o defende de um grupo de guardas armados. Ele expressa sua profunda gratidão e toma gosto por Shrek imediatamente e passa a segui-lo entusiasmado.
 
                 </p>
             </div>
-            <div>
-                <h3>Fiona humana</h3>
-               
-                <p>como a fiona era quando humana?</p>
-                <img src="https://static.wikia.nocookie.net/doblaje/images/b/bd/Princesa_fiona_humana.png/revision/latest/scale-to-width/360?cb=20191123002830&path-prefix=es">
+            <div class="coluna">
+                <h3>Características da Fiona</h3>
+               <p>Fiona ora é uma princesa, ora é uma “ogra” gordinha e verde; mostra-se uma mulher forte, dona do seu próprio nariz, não submissa aos homens presentes no filme (característica forte nas princesas dos contos de fadas), determinada, mas que em nenhum momento perde sua feminilidade, tampouco sua beleza.</p>
             </div>
-            <div>
-                <h3>Fiona Ogra</h3>
-                <p>Como a Fiona era quando ogra?
-                </p>
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFRYZGRgaHBocHRwcHB4dHBwfHh4aHBwcGB0eIS4nHCErIRwaJzgmKy8xNTU1HiU7QDs0Py40NTEBDAwMEA8QHxISHjQrISs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDY0NjQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAW8AiQMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAMEBgcBAgj/xABJEAABAwICBwUFBQcCAgoDAAABAAIRAyEEMQUSQVFhcYEGIpGh8BMyscHhB0JSctEjYoKSorLxU8I0cxQWMzVDVGODo9IVJCX/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAmEQADAAICAgICAgMBAAAAAAAAAQIDESExEkEEUSIyE2FxgcEU/9oADAMBAAIRAxEAPwDZkkkkAJJJJACSSSQB5cQFVamOe7EB3tHMpudUptAiAaZAc5wNjLtfo0Jzth7HVa6uHOa0PLWtMEvJYGuFx3g3XInZrKkMxzXMY0B7HB2u54eYB1i4Bg+6CTffLkbHpmgnS7u/ThvtW6oaZljtYwDvF8wfNJmkqlL/ALd1NzMi+nMtO0Pbu4jLaNqpWkNMs1AA9xIkBgY1oAOeub6xOc2VfqaQuSBc7gs6yJG04Krn0bE3TNA5VWHrbxUylVDhLSCN4MrB/wDpxJ2hFNGabqUjrMeRw2HmFKy/aKrBrpm0JKt9nu07K8NdDX5cCdw3FWRap76Ody09M6kuLqYhJJJIASSSSAEkkkgDyg3aTTTcNTnN7pDW8d54BGSsd7Saa9tXe4nug6rRuaMvHNRkrS4NcMeVc9Ig6R0g+q4uqOLnHflyAyCGVK5yBhRamLfVfqU2lxOwX68EbwvZDEPbrPc1n7uZ+i5KuY5qtHW7npAsVhvTzDF5lWbBdhKeqC9znO8vJeMf2UDWn2ZNthWP/qxN6TBZOeSr+122/Rd9oDGQKjYlrmOIcIIzSe8OAgSRGWcLpSG6TCGGxrmOBmDvC1Xsl2jFdgY898Wn8X1WL0cQHEMAcXExEXncrJoQlj+6XOc097VjUB/DrfeI3i3Haq/kUc0Y3KpG2pIdoXHe2pNdtyIOcjeiK6E01tHI1o6kkkmAkkkkAJJJJAAvtBifZ4eo4Z6pA5kRPTPosEx7yNZbd2yvQI5nyj5rFdJNhxHq6yydnTh/Vlr7A6OaygKpEvqEmdzZIaB0Eq2+31RmFRdHY97cNSYxwYGtYC4wLgAG5nbwlNYTHs15dUD3NMEnX7p/isM/NeNlwXd1TfsSpJaLvjtK6jfdc47APmcggj9NVHmGtA4AaxHNxt5KZiW61MO3hAK+iX1WPYQ9pLhqljg0BsXLpN3E7xkFOGIfb1/kKb9DOlsIX9+2sM7RIQCthXU3NP3Sf8/JXahoYDVcYbqiIZMO2y+bE8QAo2mMI17C0CImF1RmU14p7Q5bXLAGFxTKTHu1CXmQXt94A27u5PYHtbRY0MpUHSPxEATxiSUKZULJY/MXneFHpAa2vqi8H9V0fxTXL5/2W15cpmvfZ7pB1QPDsyS4xlf1CvCzb7ORD5mxB82gx5BaSuyUktI5a7OpJJKiRJJJIASSS4SgDL9MaLc2s9z6j2uLnEEPIkEyCAbERwVU05itYtY4EuaCdfVDdYEx1yW61HsIIJbHMLIPtB0Q5jgWnuyYIygmb+a41gSpve/+HRjvbS0M9jcG51KnWY8BzH1IDhrNklwmORPijD9HsoNfVfEEhzw1oaCZAuB70Wz3IF2PxwDHsFtV+XAgfMFWaniNY393jkZXBmyXNOdvWx+KBmP7WseyKLdd+QA37iiOiqlYMLqjA2YIYDJB2/K3NMYjTGFpkzql4/CBnulRhpmpUMMoETkXu1RziJPgs/CnP4zpfbLU+2EcRjwZAQrE1UYbR7nfIc7aQIHIcOaA6VqtaLJYvyrRFvgqfaJ9wRaSR5FQqdYZ/hAHOf8AKkaaAc2SYh05TJg2R7sF2SfjXipUaW4ZpkmIFRwPut/EARc5bN69jHO5SImvFGkfZ9gYoNqOEEtEdQJ8o8VcU3RpBoDQIAAA6Jxboyb2zqSSSYhLiS8VagaCTkASeiTegBWmtIFvcYYccz+EcOJVaxDXG7nF/wCYknzUg1S9znOzJJ+nQWVW7TaXdTe0Uw5z/wAGx07JyBjavCvJfyMvjPXpHRKUrbC0yJZmM2n4H9UPxuFYWPc2QL6zd2+ybdpek0NqF4ZHvtJ7x4Eb0OqdqKOuBRD6rnwNVjSSd1s52Qnjw5FXCeym19lUw2Nbh63cMsJIPETYrQ8DiadVkQ1zTsN1mmmdd9V+tSdTdrTqFpBE7xvTuDw+MoMFQUqraZ+8WODfGLdV6GX438kp9Mh3yaJT0S1h/ZhrRwAB8VMp4ZrLudJ4qjYbtHWAz6OHzCbxOmaj7OfbcLLjeDK340+A89os+lNOtbLWXKrNbEueZJUFryURwGBe8wxpPHYtpxzjRm26CnZXA0a2JpU67A9jiZa6YJ1XFswb3AtldbXRpNY0NYA1rQAAAAABkABkFj+HwPsHMfr/ALRjmuDRcyCDBjILXMDim1abajZ1XAETY8iuv49Jp6E1olJJJLoJEkkkgDiC9ocTDQwZuueQ+vwReo+ATuBPgqE7HPeS6o7WdeCAGgCSQ0Abpz2rm+UreNqFtsqdb5O1KmqqTpOtr1S8E2tntVg03iu5A2/BVEnWPCfPJcPxsFY35VwzriFS2xxmh34qs2nTZrOOqPaW7gcc3D7wAk23I7To4HAVi3BNfisSyZfUePZUjx1GgOd+6AY3gquMx1ZhfTpPcz2xax5Z7xbmQ05tzNxsVu0VoynQp62qGtAkDaOPFxXsQ3Ups5cqSppEbGGpVIr4usSW3EQxrSY7rWtvG7WlyTvaVgfeYyM3XqOHAOnUH5r8AiNLCaztd8F33Rm1g3N473eFlILOC83P8/nxx9fY5j7Kc3soSNdr/eveT4k3lQcRoCq02brciPmrk2hUa49/UpjLIkzsEg+M9NqVOoHOta2ZuXfxfot8eHLb8m1p8r7JdJAHRfZoyDVI/K3/AHE5I85waNVlmxkLeJzPincS+zWstIk9cvgEzqjJdkfFhPdLb/szdMjGoR7pgbgI/wAqfoztNWw8Ns+mCe6YtJk6rhcX3yFHqNEf5ty2IRis/WzatvCfoW2bDovSVPEMD6bpGRG1p2hw2FTlkHYzTfsMQGuP7OpDXbgZ7ruhkciVryxqfFlJ7OpJJKRkLS79WhVduY8/0lZrTxhI90dCfnK0TtA6MNW/5b/gVmWHatscqlyS20RNOVDui1kGpMgNj1mjPaKkQwP4QfiFH0Nh9bVccgLc/p81z1hbppfZ2TmUwv8AAU0LokB2u4d52c7ABcDd9UX0m67WfxH4D5ruj3DWPI/EKNpZ/wC0I/db/uXTEpPS9HJdNrb9jIqlnunps6hTsO8lpe+A3ZAz2db2A2lD8HT13gHLM8vUDqpuJqa9TUHusIHAui+X4WmOZO4KMuDFVJuVv7EqaQ1XcT3n2GwSIbunfN0PxFWDAzBJ3wbyFYMTQBaYygAiLZXvv+mSrxa4loYBOwm7Wna52UxsbtMZZrXpCC2Gw4HeeRrZxOW6U8+k0DZ0jgoBwxbnUqE79cj+lsNHKE07FOb73eG+BrDnFnDhAPFKorsaaPOMuS4Hn9N6EYtFq1QOFiIN5G396fHigmLffPh8PolNemDXsG13Ld9AVy/DUHuMudTYSd5LRKwLEvW39h2kYHD62epPQkkeRCnIElgSSSWRQD7XP1cJU46o8XNCzqkVoHbf/hH/AJmf3BZy19l0YeiK7JeJ7zC10QeihYABg1d3r4QuVKwChOxQa/3s89wO7jaFpTEiy6PrQ+OFjvn0E3pwd9j97S3q0z/uPghuGxN7Hlw2ieqI494fSMTI74+fkSsk9UV2h/RUNY552nPgPrKjYStETmZd1cS5w/q9QuiqBRDQe8WZcXCT8VFY10z4Dcmk3WxPhBd+OAaGk2i+8nIACTtnco1JguYFzMJuizzU2gwRe61S0IYxD7ScvNDaz1Mxb7n11QfEVLqmIbp4jVOofdcfAm3nkfFRcdUgGPU/5UXSVax4qPiq03O0A9SASsK7KXQ3SpOqvZTbdz3Na3m4gD4r6NwtAMYxgyY1rRyaAB8FlX2U6D16rsU4d2nLGTteQNZw/K0xzdwWtrGntjR1JJJSUDtO4I1sPUpiNZzTqz+IXb5gLGnVyCWkEOBIcDmCDBB4grdVT+1fYlmKJq0neyrbTEsfH427/wB4X3zZXFePAmtmYV8QmdFYJ+Jq6rAdRs6z7Q0xIEnMm1hf4qxD7NMY4n2teixguXN1nmBckNhvxRvReCZh6TabJIbPeObiblzuJWHzPl/xT+PbHEbfILodng2A6o52+BAPDeFIxjACGNEAfPeiJfcclCr3eVXwbrJKqntjtJdEMNC9Be3s3LwF6BiPsCkvfAzUJtQDNMV8WBtQB5xtS6B42vEpzHaQaNqr+JxBeeCmqA84mtrmJ3+guBrnuDWgkuIa1ozcSQABxJIXGsVz+zHRHtsX7Rw7lAa3AvdIYDy7zv4Qsa+y0ap2a0WMNhqVERLWjWja43ef5iUWSSWJQkkkkAJJJJAAXtQSKDoMd5k8tYW8Y81TziLKZ2/0u4H2bBrBg1nAbXHIdGmeqzf/AK1vaYLJ5Lz/AJfx7u00vRc0kizYrSOoRrHqouI0oAVWMdpx77BgE+ai0KdYt1ocW7yLdF1fEmsc6YqaZZ3aZbvTD9MDeqw17jefBd1Xbyu7zbMtByrpkqBX0g921RfZnmnNToh0w0NkON3AwnpECy6GRZJ5SA87VsX2V4TVwZfF6lR7p3hsMHSWu81jYIW7dgME6lgaLXm5BfG4VHOeB4OHWVN9DksqSSSyKEkkkgDih6Uxgo0n1D90WG85NHUkKYqf27xdqdEHMl7uQs0HqSf4U5W2JlNxFUuJc4yXEknaSTJPioLNG0yS4tknMnxUh7RE7/Vk+wSPRm8fArck86OwFNus17WllzldhFtZvrYjuIwrDSLAGgasA2AFomUPwAGqTvMcc2/VTsTQZmWMJLm3LRvnOM1lS54LnorFTs/QAgVWA3ydMeChVNCtHu1AeTD8SrQWbrEfh5nIJSfGdsDaFopf2Tv+ij4jBuZmHEco+ajB37p5FX6tRDxcdMxuPyyQvFaJBuI6Zb459E/H+xbKqHz90Tun6LhqDawRz+inV9HOB8b+s1CrUztS8Q2ca5h+6RyK3LsHpL2+Cpm2sz9mQNmpZs7iW6p6rDHBXD7NNMmjiRTce5W7p3B/3D1Mt/iCmp4GnybQkkksihJJJIA4s17X19fFPA+41rfAax8ytKWRaZq62Irn/wBR46BxA+CuOyWRHuiBHH9ZTkAC6YD5O4Rb14KUww3kZ6ZFbEjuBNrfjb9UUxTZb1b8UNwEib5kdc/8IlixLCJ3fELKv2LnojOfMiIMxwiTJ+F14qMgTsFo55HqvNV0k2Ih22b2JtwtvXJtwtsn1wWk9E+x3VtmLgHieEReN/BMvo3HKYtn47k41+qJjvZD166pptPeTtv8vC6oQxUpB1rC2W21h05IZicECLRujf8AoihYbA3mSD9N/DJM4gZTlHTdPFAADEYHcojqTmOBbIIuCMwRkRyN0eqgu4C/PP6qJiWTmL/FIDaez2khiMNSrbXtGsNzh3XD+YFE1n/2V44mnWoE+44Pb+V4uP5mk/xLQFz0tMtPaOpJJJDPJWLa2tJOZJM8TJWx41+rTe7c1x8ASsaoZDpEZ71pj9ks8udf1yKmDK8br+vJRKje8OikloI3x8P8rURKwDTAm9x0sY5oliT3HTlGzP8AyoOBBgCRHejlAj4lS8S7uO5FZV+xc9DbgJnWE3mY4+J4fJMB4IJjlvyTjo1Sba3mZChe2GtOYgz4fBaT0Q+x9jdw4m1o/T9F0PF9lsvxfGOhXrDukCwtJmSM7A2PgvTiA4ddn09XVCGn0496wvYjbtnaT5qM9kjKLcd+3ZuU+qBIJFrzfflaCOuSj1wNUznsnmcuKAID4yIIcchOcZRuUDEkZZ/JEK8apnoTY/5lDq7Ybbx3+rpMCwfZhXjGPb+Kk7qWuYfmVrKxv7PXxpBgG1lQH+XWt4BbIsL7Kno6kkkpKIelTFCqf3H/ANpWO08vXn1WwaaP/wCvW/5b/wC0rIGC3D5LXGSzzBDhJm91KLrA7NvLLPeN6ivPeA2yOohSQXZ2gX4745rQkJ4IWBjYfM+OxO1D3DyK5QFj0HgB8yUj7p5LFvk1XQy1sTP3gATkLAE7Y3ZIViHw4RnccxG3d9UWovcAHZsgWtY7Dmg+KbE3vrC+4GfXVaroyfYRov7sC3GfUbk9TZcA2Gey+Vxe+Sj4JoIFichGfrnwUhjnawDRMmx2ttfLfa/JUA7UpEZSQZ2G8Z2zIUKuQADfK3ibfBEAWixu7dt/UbOKh4s6ovfMfPIZi6ABr2lwk7LxyG1QcS2AYyOzcibSRmJB22kc98dUPxYkGLxaY9RyhICb2A/7wo8qn9jltCxbsAf/AOhR5VB/Q9bSsb7LR1JJJQMG9oHRhq5H+m/+0rJKUx66rWO0pjC1/wAjvgsnYLeslpHRLPL3AuBz9GVOw4kt3gid3M9JUGO82I+WW5EKDb55iDF5mwnxOe5aPoSCNIWGyb+KZwdcPY17cnNkcjkmNO4r2WHqPFiGEN/Me63zITPZxsYaiNzAFi/s1/omUQ4tF4BAAGcnje2y6F4+zi07Yvuv+nj1RbDsJFiLWzNs78SMozvuQzSDgXwNouYjlbIfRbLoyZ70ZeAdgM7LiylvrEmQMoMb85joEM0e/vbtoz8/BFy2RacjI3c7ZXyzvtVCOsrGxaTAM6p2G2e4fFNYupINheRGUZb8kqZ7/wC9tsRa8zv6JzEU5aDq+EXsLdfNCAGU3gC8DgPhfZKj4lvc4jMZHb/lPYdveJzO/wAcvLwXjHskSfe377bUANdjKurj8OZgFxb/ADMcI8SFuCwHQ9XUxWHdur0p5F7QfIlb8sL7KR1JJJQUBu1jowlb8oHi4D5rLWi3Hy2LS+2zowjxvLB/UD8lmbMjw9euS1jomjxqy8DZ9MkWwFIC42yegsI80JElwt0/X1tR3Di3r1nKqnwErkqn2gY3u0qIzcS93IWb4kk/wqx6KEU2t/DbyCznT2L9ti3PBlus1jfytMeZk9VoejH2cOR+KhL8WPf5Dvs5PemA52VrGDndRMe3KRAB8pvO8fNTiwa5G+DM7hFuP6qFpKmW7b2kfMRxMLSeia7IVJwBOeVujjlx3Is1k/5uRuPkgYf3gefxlFKBJFyJ37R53uAExEhgiwEXg3vs2TJ5zZOVWEtJF9WScuG0fFRDUM96xFw4R6HzUlgJaQM7z9JzngmgBbXEPLm22kZTv5eimsY5zm3sNgyt8F7eYdqi5NpJmOq8Yl8gjaJHDokAENTUe1/4Xtd4EH5L6JaZXzliz3XL6Iwrw5jXDItB8QFlk9FIfSSSWZRVu39SMMONRo8A4/JZ43Lj6MK+faLUijTbvfPg0j5qiEW/Tmto6JfYqEF7fWV1J07i/Y4d7gYdGo38zrT0ueiawLO+Tw8N6BdtcXL2Uhk0a7ubrAdB8Uq5Y1wtlWwzf2jPzN+IWk6Mf3o3j6rPcCyarPzA+F1ecI+IO4hVK2mLfOwxXMOYdmRG/aJ81Gx4BubDy3Zb+GalYj3Z3EHw+ij4xxc3fIG47bcjbaiGFICOMETxEIno6IJMkROe7IX2fRDahmTv+ngpWAfDg3buyVEkuoO9YQM7Ayd22R4p+ke7Y7Du6E/qvGIbdutMHbYDLIjeutMtJB4cYO/cP0QAPc0XjZMi85+fmmMc63w3+CkYlpBkG4tIyOxRMSO7tOxAAbFiWnML6D0S6aFI76bD/SF8+Yn3Vv3Z904XDk5mlT/sas8hSCKSSSyKKR9ozrUBvNQ+Ab+qpZNrZ+rq3faO7vYccKhP9H1VRcf16bvBbx+pL7HsBDdck2GZ4ZkqhY7EmrUe8/fcT0yA6ABWnTWJ1MM+M6jgwcjd39Id4qntCn2D6CGhaU1J3AlWfDlCdAUIY52+wRWktZWkSw7h36zByjwsmHslhJN27dm6Dz3Lzo99i3r+vyXtzQHHjfqBs8lkuK0U+ZA1cGTz39P0XcC6CDxz9fBOYll+fwj6ZqEwxcdQtCSx4kEC92kEzu3jLL5qMx9+9eI8/iV7p3ZvPL1Gy6jEw4WBI8+XnysgBY8EunIXjnfysUNxb7XzCL42LEcNsxPGL7UExrp6WlDAgYh3djit37KvnB4Yn/Rp/wBoWD4g90c1uvY7/gcNef2NP+0LO+ipDSSSSyKM9+0N37eiP3HHqXfQKrvdt9bLKw9v6k4pjfw02+bnH5KulgiT/jet4/Uh9lc7T1I9mz8zjzs0fAoRRZJAGZRDtGZqM/IPiU52fwuu/WOTfihLkA9haGoxrdwXRmpVUKM4LUkfwtSHAojWGR3fDahDXQUUwz5byt0Wdr2VL9ELGb9w8dnzQura03MIziKdojL0Nkf4CF4lme8/4t5oXKBhPRmItG0TbYZEZJqsACAMxmRy2/oomDqQ4Hw5cfJEMdNiLE+W8i6YjuJp6zWnx9eskBxlunq6N4ZkgjWvnP09bkEx47xkXQBBxOQ9Zrd+yH/BYb/k0/7QsGxBsPNbr2MJOBw03/ZM8hA8lnfRUh1JJJZFGYdt3A4x37rGD4u+YQRjCTw85OwH5oh2rJdja0C0tHCzWg35phjQxpe4xAJnYN59bFtvUk62yn9pv+IgbGNHxKPaGwmpTba7rlBMFhjiKzqrhDC6eYFmjwAlWsK5XBNM8PEph7VKcbKO5aCIz96nYWptUOovWHfBSa2CCdVkifUfTNDcVSt+nH5W80Rov2euSbxLLcDP0BWS/F6Zb5WwJTcWuN53evWSJtbrMiTIy3yNyH4qmWnoU9gsRESdv0y3xZUSP06+q4EyCDlv2zIHwUPStK+tFnC0clNxTAHAjI5O2eK8B7SNV8zaD+nD1dAFdcO6tv7B1A7AYeNjS3+Vzm/JY3jsLqkxMFar9l+J18CG/wCm97fGH/71GToc9lxSSSWJZlGKqtfVqVDcuc459BblAQLS1c1j7Fh7s/tHDIAfcG8narX270dr4gahLZYNZrTqlxk342gWuq5Sw4YNQN1Y2RC2id8smno94emGtDWiALBPELwxOQt0iDyQvDwn4XHMRoCA8JgOgqbUplQa4hIAjhqgNjluUh9TVIa/3XWa45E/gdud8eaD4etCLU3tewseA5jhBBulUqkNPQ1icNzgA33cxuQqrTLCiFY1MPdwdVo7Hi72cHj7445808GsqsDmFr2nIg24wfu8lntzwx630M4SqC3UdcRl6zXX4IfddY5A+uiivwxYdses1IovEkk57T6uq7EN4nC2ImfpvRz7PdKsw9V9Oo7VbV1dUn3Q8SLnZrAj+UIY9wiBfjI84+KgYtkza15RU7WgT0bquqq9g9NuxFAioZqUyGuJzcD7rjxsR0narSuZ8PRoRMbo+nVEVGh247RyKAYzsnb9m+34XjWb0nJWpdTTaAzfFdn6jPepGPxMdbwMqJ/+P4uH5mfMErUk0+gw+81p5gK1kaFpGZjR5/Gz+r/6r1/0B29vn+ivulPZUqbqjmNOqLCAJJsB4lY3pqma7y6o95Oxoc5rWjc1rSPEyTvVrJTE0iyuwDuHjHxUPFaPMXFt4uPEKtVmMAAp67I+82o8ONouQ5SMNpXE07tf7QfhqZ9KjYd/NrJq37QtIWIwxYd4XaGIIU7DdoMNWOpWb7J+RDiGjo9o1COLg1O43QWrdri0fvtIHRzZB8k1aYaHMNjvBN1dF0nOL6L3UKhzLPcf+dmTlBGFqNybP5SHfAlSaLan4H/yn9FXkn2LTR7NeswRXpa7f9Sj3283M99vTWXqj7Gp/wBm9p3gG45tNx1CkUWPFyQzi5wHkL+Sl1MBTeNeowVI++5rWNH/ALj4hQ1K6Y9t9ohHA8ZTNbA2z8/omcRpLCsOqyq4ndSdVqjkHE6g6FDMTpR0w0Yv/wCED/cp2/sekW37P3up4zUM6r2ObwlsOB8A7xWpr5+wml8TSc3EMZUfqObLXtbN8gSyCNa4BLYJtIMLWP8ArVV/8hiv5Qs67Gi0pJJKRiSSSQBWu3LHHCuLQTqOa4gfhFiTwEz0WX1a7HbYK3RVvSXYvB1jJpljjtYdXyu3yVTWloTRkbywXLp5KJXxewZLUh9mWFmTUrkbtZnyYjOjux2CokObQa5w+88l56axIHQKnaFozPsJ2Qfia7K9ZhGHYQ7vW9o4Xa0D7zQYJORyvJjaH0WnMA9E4ElDeygRiezmGqe9SbO8KGexmF/C4fxKxpJbYGbdv9DPw2GbVwZLC14DyGsJ1Xd0EEtkd7VFt6otPCh/exD31X56z3OcGn90OJAW/V6LXtcxwDmuBBByIOwqiaY+zwGThqmr+4+45NcLjqDzVTS9iaKA/DauQtwXuk3eidfsnj6f/h23h7I83ApYbsbj6sdxrGn7zntj+kk+S08kLTJfYvGkY6kxtw8Pa4fu6hdf+JrVrypnY3sWMK81qjxUqwWtgENaDnE5k793NXRZ0+RpH//Z">
+            <div class="coluna">
+                <h3>Características do Shrek
+                </h3>
+               <p>Shrek é um ogro grande, com 2,13 metros de altura, verde e aparentemente feio e assustador (embora nos filmes tenha uma aperência similar a humana). É mal-humorado e solitário, por isso odeia companhia e vive num pântano no meio de uma floresta encantada. Mas no fundo tem bom coração e expressa valentia quando preciso.</p>
             </div>
-            <div>
+            <div class="coluna">
                 <h3>Gato de Botas</h3>
                 <p>O Gato de Botas foi contratado para destruir Shrek, a mando do Rei Harold, pois Harold queria que, sua filha (a Princesa Fiona) se casasse com o Príncipe Encantado. Após um confronto com Shrek e o Burro, o Gato de Botas decide se unir aos dois.</p>
             </div>
