@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: palevioletred;
+            background-color: rgb(255, 0, 115);
         }
 
         img {
@@ -24,7 +24,16 @@
 
         div {
             text-align: center;
+            
         }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 100px auto;
+            background-color: rgb(255, 255, 255);
+        }
+ 
     </style>
 </head>
 
@@ -35,7 +44,7 @@
                 <h1>calculadora</h1>
                 <div class="row">
                     <div class="col-12">
-                        <input type="text" class="form-control" id="n1"></input>
+                        <input type="text" class="form-control" id="valor"></input>
                     </div>
 
                     <div class="row">
@@ -53,7 +62,7 @@
                             <div class="row">
                                 <div class="col-8">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">&lt;x</button>
+                                        <button class="btn btn-dark" type="button"onclick="apagar()">&lt;x</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -65,17 +74,17 @@
                             <div class="row mt-2">
                                 <div class="col-4">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">7</button>
+                                        <button class="btn btn-dark" type="button" onclick="insere_7()">7</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">8</button>
+                                        <button class="btn btn-dark" type="button" onclick="insere_8()">8</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">9</button>
+                                        <button class="btn btn-dark" type="button" onclick="insere_9()">9</button>
                                     </div>
                                 </div>
 
@@ -84,41 +93,41 @@
                             <div class="row mt-2">
                                 <div class="col-4">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">4</button>
+                                        <button class="btn btn-dark" type="button" onclick="insere_4()">4</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">5</button>
+                                        <button class="btn btn-dark" type="button" onclick="insere_5()">5</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">6</button>
+                                        <button class="btn btn-dark" type="button" onclick="insere_6()">6</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mt-2">
                                 <div class="col-4">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">1</button>
+                                        <button class="btn btn-dark" type="button" onclick="insere_1()">1</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">2</button>
+                                        <button class="btn btn-dark" type="button" onclick="insere_2()">2</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">3</button>
+                                        <button class="btn btn-dark" type="button" onclick="insere_3()">3</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mt-2">
                                 <div class="col-8">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button">0</button>
+                                        <button class="btn btn-dark" type="button" onclick="insere_0()">0</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -133,17 +142,19 @@
                                 <button class="btn btn-dark" type="button">/</button>
                                 <button class="btn btn-dark" type="button">x</button>
                                 <button class="btn btn-dark" type="button">-</button>
-                                <button class="btn btn-dark" type="button">+</button>
-                                <button class="btn btn-dark" type="button">=</button>
+                                <button class="btn btn-dark" type="button"onclick="efetuar_soma()">+</button>
+                                <button class="btn btn-dark" type="button"onclick="resultado()">=</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <img src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!sw800"
-                        alt="">
+                    <img src="https://media.tenor.com/xu144P488qAAAAAj/cute-calculator.gif" alt="">
                 </div>
+
+
+
     </main>
 
 
