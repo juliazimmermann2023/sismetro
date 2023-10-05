@@ -1,185 +1,171 @@
-var valor;
-var operacao;
-var memoria = 0
+<!DOCTYPE html>
 
-function efetuar_soma() {
-    if (typeof valor != typeof undefined && typeof operacao != typeof undefined) {
-        valor = operacao(valor, Number(document.getElementById("valor").value));
+<head>
 
-    } else {
-        valor = Number(document.getElementById("valor").value);
+    <title>Aula 14</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        h1 {
+            text-align: center;
 
+            background-color: pink;
+        }
 
-    }
+        body {
+            background-color: rgb(255, 0, 115);
+        }
 
-    document.getElementById("valor").value = "";
-    operacao = soma;
-}
-
-function resultado() {
-
-    document.getElementById("valor").value = operacao(valor, Number(document.getElementById("valor").value));
-
-    valor = undefined;
-    operacao = undefined;
-
-}
+        img {
+            width: 50%;
 
 
-function insere_0() {
-    document.getElementById("valor").value = document.getElementById("valor").value.concat(0)
+        }
+
+        div {
+            text-align: center;
+            
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 100px auto;
+            background-color: rgb(255, 255, 255);
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="row">
+            <div class="col-4 offset-4">
+                <h1>calculadora</h1>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="valor"></input>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-danger" type="button"onclick="apagarTudo()">C</button>
+                                <button class="btn btn-dark" type="button"onclick="motrarMemoria()">MR</button>
+                                <button class="btn btn-dark" type="button"onclick="apagarMemoria()">MC</button>
+                                <button class="btn btn-dark" type="button"onclick="addNumero()">M+</button>
+                                <button class="btn btn-dark" type="button"onclick="menosNumero()">M-</button>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button"onclick="apagar()">&lt;x</button>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button"onclick="pocentagem()">%</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button" onclick="insere_7()">7</button>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button" onclick="insere_8()">8</button>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button" onclick="insere_9()">9</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button" onclick="insere_4()">4</button>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button" onclick="insere_5()">5</button>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button" onclick="insere_6()">6</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button" onclick="insere_1()">1</button>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button" onclick="insere_2()">2</button>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button" onclick="insere_3()">3</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-8">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button" onclick="insere_0()">0</button>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-dark" type="button"onClick="add_ponto">.</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-dark" type="button"onclick="dividir()">/</button>
+                                <button class="btn btn-dark" type="button"onclick="multiplicar()">x</button>
+                                <button class="btn btn-dark" type="button"onclick="subtrair()">-</button>
+                                <button class="btn btn-dark" type="button"onclick="efetuar_soma()">+</button>
+                                <button class="btn btn-dark" type="button"onclick="resultado()">=</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://media.tenor.com/xu144P488qAAAAAj/cute-calculator.gif" alt="">
+                </div>
 
 
-}
-function insere_1() {
-    document.getElementById("valor").value = document.getElementById("valor").value.concat(1)
+
+    </main>
 
 
-}
-function insere_2() {
-    document.getElementById("valor").value = document.getElementById("valor").value.concat(2)
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
+    <script src="aula14.js">
 
-}
-function insere_3() {
-    document.getElementById("valor").value = document.getElementById("valor").value.concat(3)
+    </script>
+</body>
 
-
-}
-function insere_4() {
-    document.getElementById("valor").value = document.getElementById("valor").value.concat(4)
-
-
-}
-function insere_5() {
-    document.getElementById("valor").value = document.getElementById("valor").value.concat(5)
-
-
-
-}
-function insere_6() {
-    document.getElementById("valor").value = document.getElementById("valor").value.concat(6)
-
-
-}
-function insere_7() {
-    document.getElementById("valor").value = document.getElementById("valor").value.concat(7)
-
-
-}
-function insere_8() {
-    document.getElementById("valor").value = document.getElementById("valor").value.concat(8)
-
-
-}
-function insere_9() {
-    document.getElementById("valor").value = document.getElementById("valor").value.concat(9)
-
-
-
-}
-
-function apagar() {
-    document.getElementById("valor").value = document.getElementById("valor").value.substring(0, document.getElementById("valor").value.length - 1)
-}
-function soma(n1, n2) {
-    return n1 + n2;
-}
-function subtracao(n1, n2) {
-    return n1 - n2;
-
-}
-function divisao(n1, n2) {
-    return n1 / n2;
-
-}
-function multiplicacao(n1, n2) {
-    return n1 * n2;
-
-}
-function somar() {
-   if(typeof valor!= typeof undefined && typeof operacao !=typeof undefined){
-    valor = operacao(valor,Number (document.getElementById('valor').value))
-   }
-   else{
-    valor=Number(document.getElementById('valor').value)
-    document.getElementById('valor').value="";
-   }
-   operacao= soma
-}
-function subtrair() {
-    if(typeof valor!= typeof undefined && typeof operacao !=typeof undefined){
-        valor = operacao(valor,Number (document.getElementById('valor').value))
-       }
-       else{
-        valor=Number(document.getElementById('valor').value)
-        document.getElementById('valor').value="";
-       }
-       operacao= subtracao
-}
-function dividir() {
-    if(typeof valor!= typeof undefined && typeof operacao !=typeof undefined){
-        valor = operacao(valor,Number (document.getElementById('valor').value))
-       }
-       else{
-        valor=Number(document.getElementById('valor').value)
-        document.getElementById('valor').value="";
-       }
-       operacao= divisao
-}
-
-function multiplicar() {
-    if(typeof valor!= typeof undefined && typeof operacao !=typeof undefined){
-        valor = operacao(valor,Number (document.getElementById('valor').value))
-       }
-       else{
-        valor=Number(document.getElementById('valor').value)
-        document.getElementById('valor').value="";
-       }
-       operacao= multiplicacao
-}
-function apagar() {
-    document.getElementById("valor").value = document.getElementById("valor").value.substring(0, document.getElementById("valor").value.length - 1)
-}
-function apagarTudo() {
-    document.getElementById("valor").value = document.getElementById("valor").value.substring(0, document.getElementById("valor").value.length - document.getElementById("valor").value.length)
-}
-function add_ponto() {
-    if (!document.getElementById("valor").value.includes(".")) {
-        document.getElementById("valor").value =
-            document.getElementById("valor").value.concat(".");
-    }
-}
-function porcentagem(){
-    if(typeof valor == typeof undefined){
-        document.getElementById("valor").value =
-        Number(document.getElementById("valor").value)/100;
-    }else{
-        document.getElementById("valor").value =
-        (valor / 100) *
-        Number(document.getElementById("valor").value)
-    }
-}
-
-function addNumero() {
-    valor = addnum(Number(document.getElementById('valor').value))
-}
-function menosNumero() {
-    valor = menosnum(Number(document.getElementById('valor').value))
-}
-function apagarMemoria() {
-    memoria = 0
-}
-function mostrarMemoria() {
-    document.getElementById('valor').value = memoria
-}
-function addnum(n1) {
-    memoria += n1 
-    return console.log(memoria)
-}
-function menosnum(n1) {
-    memoria -= n1
-    return console.log(memoria)
-    
-}
-
+</html>
