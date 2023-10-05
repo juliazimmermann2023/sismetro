@@ -132,7 +132,7 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="d-grid gap-2">
-                                        <button class="btn btn-dark" type="button"onClick="add_ponto">.</button>
+                                        <button class="btn btn-dark" type="button"onClick="add_ponto()">.</button>
                                     </div>
                                 </div>
                             </div>
