@@ -138,7 +138,7 @@ function multiplicar() {
        }
        operacao= multiplicacao
 }
-function apagar() {
+function apagar_td() {
     document.getElementById("valor").value = document.getElementById("valor").value.substring(0, document.getElementById("valor").value.length - document.getElementById("valor").value.length)
 }
 function add_ponto() {
@@ -172,8 +172,9 @@ function mostrarMemoria() {
 }
 function addnum(n1) {
     memoria += n1 
+    return console.log(memoria)
 }
 function menosnum(n1) {
     memoria -= n1
-    
+    return console.log(memoria)
 }
