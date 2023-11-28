@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 9</title>
+    <style>
+        header img {
+            margin: auto;
+            display: block;
+            width: 20%;
+
+        }
+       header{
+           background-color:rgb(3, 65, 3) ;
+       }
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(179, 234, 227);
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style-type: none;
+            width: 100%;
+        }
+        .coluna{width: 100%;
+            float: left;
+        }
+        @media (min-width:800px) {
+            .coluna {
+                width:50%;
+            }
+         }
+            @media (min-width:1200px) {
+            .coluna {
+                width:25%;
+            }
+         }
+        .personagens{
+            padding: 10px;
+        }
+       
+        h3{
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img
+            src="https://assets.stickpng.com/images/59f8782b3cec115efb362386.png">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Página 1</li>
+                <li>Página 2</li>
+                <li>Página 3</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="personagens">
+            
+               
+                <div class="coluna">
+                    <h3>Burro</h3>
+                <p>O Burro sofria com uma vida de abusos. Era constantemente ridicularizado pelas pessoas, até que, literalmente, correu para o ogro Shrek. O monstro o defende de um grupo de guardas armados. Ele expressa sua profunda gratidão e toma gosto por Shrek imediatamente e passa a segui-lo entusiasmado.
+
+                </p>
+            </div>
+            <div class="coluna">
+                <h3>Características da Fiona</h3>
+               <p>Fiona ora é uma princesa, ora é uma “ogra” gordinha e verde; mostra-se uma mulher forte, dona do seu próprio nariz, não submissa aos homens presentes no filme (característica forte nas princesas dos contos de fadas), determinada, mas que em nenhum momento perde sua feminilidade, tampouco sua beleza.</p>
+            </div>
+            <div class="coluna">
+                <h3>Características do Shrek
+                </h3>
+               <p>Shrek é um ogro grande, com 2,13 metros de altura, verde e aparentemente feio e assustador (embora nos filmes tenha uma aperência similar a humana). É mal-humorado e solitário, por isso odeia companhia e vive num pântano no meio de uma floresta encantada. Mas no fundo tem bom coração e expressa valentia quando preciso.</p>
+            </div>
+            <div class="coluna">
+                <h3>Gato de Botas</h3>
+                <p>O Gato de Botas foi contratado para destruir Shrek, a mando do Rei Harold, pois Harold queria que, sua filha (a Princesa Fiona) se casasse com o Príncipe Encantado. Após um confronto com Shrek e o Burro, o Gato de Botas decide se unir aos dois.</p>
+            </div>
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
